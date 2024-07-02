@@ -8,7 +8,7 @@ import tensorflow as tf
 from PIL import Image, ImageDraw
 
 if not libs.find_spec("mlopsency"): sys.path.append(pathlib.Path.cwd().as_posix())
-from mlopsency.utils.fetch import rps_download
+from util.dtdl import rps_download
 
 
 def data_generator(dpath: pathlib.Path, subset: str):
