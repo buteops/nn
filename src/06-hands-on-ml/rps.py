@@ -96,7 +96,6 @@ if __name__ == '__main__':
   class_label = class_name[max_index]
   print("Class label: " + class_label)
 
-
   # Evaluation
   rps_model.summary()
   loss, acc = rps_model.evaluate(train_generator)
