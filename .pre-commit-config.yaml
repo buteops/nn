@@ -1,15 +1,15 @@
 repos:
   - repo: local
     hooks:
-      - id: nbqa-ruff
-        name: nbqa-ruff
-        entry: nbqa ruff .
+      - id: ruff
+        name: ruff
+        entry: ruff check .
         language: system
         always_run: true
         pass_filenames: false
-      - id: nbqa-mypy
-        name: nbqa-mypy
-        entry: nbqa mypy docs/
+      - id: mypy
+        name: mypy
+        entry: mypy src/
         language: system
         pass_filenames: false
 

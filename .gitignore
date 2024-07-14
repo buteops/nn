@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 .github/
 datasets/
+models/
+.ruff_cache

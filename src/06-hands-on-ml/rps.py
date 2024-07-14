@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import os, sys, glob, random, pathlib, importlib.util as libs
+import os, sys, glob, random, pathlib
 from typing import List
 from dataclasses import dataclass
-import keras, numpy as np
-import tensorflow as tf
+
+import keras # type: ignore
+import numpy as np
+import tensorflow as tf # type: ignore
 from PIL import Image, ImageDraw
 
-if not libs.find_spec("mlopsency"): sys.path.append(pathlib.Path.cwd().as_posix())
+sys.path.append(pathlib.Path.cwd().as_posix())
 from util.dtdl import rps_download
 
 
 def data_generator(dpath: pathlib.Path, subset: str):
   return keras.utils.image_dataset_from_directory(
-    directory = dpath,
+    directory=dpath,
     labels='inferred',
     label_mode='categorical',
     color_mode='rgb',
@@ -33,8 +35,8 @@ def get_random_image(dpath: pathlib.Path, class_names: List):
 
 class RPSCallback(keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
-    if logs.get('accuracy') is not None and logs.get('accuracy') > 0.95:
-      print("\nReached more 95% accuracy so cancelling training!")
+    if logs.get('accuracy') is not None and logs.get('accuracy') > 0.98:
+      print("\nReached more 98% accuracy so cancelling training!")
       self.model.stop_training = True
 
 
@@ -70,8 +72,8 @@ class RPSConfig:
   SHAPES = (150, 150, 3)
   BATCH_SIZE = 32
   VALIDATION_SPLIT = 0.4
-  RESULTS = 'assets/results'
-  RPS_DATA = 'datasets/rps/'
+  RESULTS = 'assets/'
+  RPS_DATA = pathlib.Path('datasets/rps/')
 
 
 if __name__ == '__main__':
@@ -111,4 +113,4 @@ if __name__ == '__main__':
   pred_labels = ImageDraw.Draw(pil_img)
   pred_labels.text((75,75), f"Class label: {class_label}", fill = (255, 0, 0))
   pil_img.show()
-  pil_img.save("assets/results/plain_rockpaperscissors.png")
+  pil_img.save("assets/plain_rockpaperscissors.png")
