@@ -32,6 +32,6 @@ jobs:
       env:
         with:
         personal_token: ${{ secrets.sapategu }}
-        publish_branch: mkdocs
+        publish_branch: gh-pages
         publish_dir: ./site
         cname: sapategu.github.io
