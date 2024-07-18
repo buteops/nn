@@ -31,7 +31,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       env:
         with:
-        personal_token: ${{ secrets.sapategu }}
+        personal_token: ${{ secrets.GH_PAT }}
         publish_branch: gh-pages
         publish_dir: ./site
         cname: sapategu.github.io
