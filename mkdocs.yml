@@ -1,4 +1,4 @@
-site_name: SMKDEV Course - Dev Mode
+site_name: fromthenets
 site_url: https://sapategu.github.io/fromthenets/
 
 nav:
@@ -19,7 +19,7 @@ theme:
     - content.code.copy
     - content.tooltips
     - navigation.top
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.footer
     - navigation.indexes
     - navigation.path
