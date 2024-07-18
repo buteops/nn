@@ -1,0 +1,72 @@
+site_name: SMKDEV Course - Dev Mode
+site_url: https://sapategu.github.io/fromthenets/
+
+nav:
+    - Home: index.md
+    - SNPE: snpe.md
+
+
+############# Docs Configurations ################
+theme:
+  name: material
+  # logo: assets/smkdev.png
+  favicon: favicon.svg
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - navigation.indexes
+    - navigation.path
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      accent: lime
+      primary: black
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      accent: lime
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: lime
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+ - mkdocs-jupyter:
+    include_source: True
+ - search
+ - social
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/smkdev
+    - icon: fontawesome/brands/github
+      link: https://github.com/smkdev-id
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@smkdev
