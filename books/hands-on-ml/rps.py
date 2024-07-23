@@ -10,7 +10,7 @@ import tensorflow as tf # type: ignore
 from PIL import Image, ImageDraw
 
 sys.path.append(pathlib.Path.cwd().as_posix())
-from util.dtdl import rps_download
+from extra.fetch.dtdl import rps_download
 
 
 def data_generator(dpath: pathlib.Path, subset: str):

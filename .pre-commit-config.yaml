@@ -9,7 +9,7 @@ repos:
         pass_filenames: false
       - id: mypy
         name: mypy
-        entry: mypy src/
+        entry: mypy books/
         language: system
         pass_filenames: false
 
