@@ -55,8 +55,8 @@ The Advice to Learn from [Andrej Karpathy][0] or from [George Hotz][1]
 
 ### The Books
 
-* Mathematics for Machine Learning
-* Neural Network from Scratch
+- [ ] Mathematics for Machine Learning
+- [ ] Neural Network from Scratch
 * Python Data Science Handbook
 * Artificial Intelligence and Machine Learning for Coders
 * Python Machine Learning
