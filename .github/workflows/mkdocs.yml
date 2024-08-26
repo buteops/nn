@@ -26,7 +26,9 @@ jobs:
         pip install "mkdocs-material[imaging]"
 
     - name: Build MkDocs site
-      run: mkdocs build
+      run: |
+        mv __docs__ docs
+        JUPYTER_PLATFORM_DIRS=1 mkdocs build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

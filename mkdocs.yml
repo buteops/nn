@@ -1,5 +1,6 @@
 site_name: fromthenets
 site_url: https://sapategu.github.io/fromthenets/
+docs_dir: __docs__
 
 nav:
     - Home: index.md
