@@ -26,9 +26,7 @@ jobs:
         pip install "mkdocs-material[imaging]"
 
     - name: Build MkDocs site
-      run: |
-        mv __docs__ docs
-        JUPYTER_PLATFORM_DIRS=1 mkdocs build
+      run: JUPYTER_PLATFORM_DIRS=1 mkdocs build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -36,4 +34,4 @@ jobs:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_branch: gh-pages
         publish_dir: ./site
-        cname: sapategu.github.io
+        cname: buteops.github.io

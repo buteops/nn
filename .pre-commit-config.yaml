@@ -9,7 +9,12 @@ repos:
         pass_filenames: false
       - id: mypy
         name: mypy
-        entry: mypy tests/
+        entry: mypy tests/ --strict-equality
+        language: system
+        pass_filenames: false
+      - id: mkdocs
+        name: mkdocs
+        entry: mkdocs build --strict
         language: system
         pass_filenames: false
 
@@ -35,12 +40,6 @@ repos:
       # - id: whitespace
       #   name: strip whitespace
       #   entry: find smkdev-django-public -type f -name "*.py" -exec sed -i '' 's/ *$//' '{}' ';'
-      #   language: system
-      #   always_run: true
-      #   pass_filenames: false
-      # - id: mypy
-      #   name: mypy
-      #   entry: mypy blogs/ bootcamps/ capstone/ challenges/ extra/ sandbox/ --strict-equality
       #   language: system
       #   always_run: true
       #   pass_filenames: false
