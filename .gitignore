@@ -3,6 +3,7 @@
 .ruff_cache/
 __pycache__/
 __datasets__/
+__assets__/
 site/
 weights/
 *.pdf
