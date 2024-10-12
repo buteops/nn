@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: mypy
         name: mypy
-        entry: mypy tests/ --strict-equality
+        entry: mypy model/ --strict-equality
         language: system
         pass_filenames: false
       - id: mkdocs
