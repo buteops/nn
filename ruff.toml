@@ -34,11 +34,6 @@ lint.select = [
 line-length = 150
 
 exclude = [
-  "assets/",
-  "blogs/",
-  "capstone/",
-  "challenges/",
-  "extra/",
-  "sandbox/",
-  "test/",
+  "__assets__/",
+  "__utils__/",
 ]
