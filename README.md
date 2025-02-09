@@ -47,7 +47,7 @@ The Advice to Learn from [Andrej Karpathy][0] or from [George Hotz][1]
 | **Data Augmentation and Synthetic Data**  | Increasing the diversity of training data.                         | SMOTE, Data Augmentation, GANs for Synthetic Data, Augmentor, Imgaug                                                        | 400                 |
 
 ### Base to included
-- C, Rust, Python
+- C, Rust, Python, Mojo
 - The **Tensor** and its behaviour
 - Machine Learning Compilers
 - SNPE, coremltools, TensorRT, armnn
